@@ -3,7 +3,7 @@
 /* LIBRAIRIES DE NOS FONCTIONS*/
 
 
-
+############# - FONCTION POUR EXTENSION - #################
 function getContent(string $string):void {
 
         if(is_array(FILES_EXT)){
@@ -15,3 +15,5 @@ function getContent(string $string):void {
         }
     }
 }
+
+
