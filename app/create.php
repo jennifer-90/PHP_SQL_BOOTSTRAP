@@ -9,7 +9,6 @@
         && (!empty($_POST['pwd']))
   ){
 
-
         /* -- Vérification si l'utilisateur existe déjà via notre fonction créer dans lib/user.php-- */
 
         if (userExists($_POST['login'])) {
@@ -18,21 +17,15 @@
           die;
         }
 
-
-
       foreach ($_POST as $key => $value) {
           $$key = $value;
       }
-
-
 
       $params = [
           trim($login),
           password_hash($pwd, PASSWORD_DEFAULT),
           $email
       ];
-
-
 
       /* CONNECT */
       global $connect;
@@ -53,8 +46,6 @@
       } else {
           $_SESSION['alert'] = 'La création de l\'utilisateur a échoué';
       }
-
-
 
   }  /********** Mais si c'est ces champs sont vides.... (Toujours dans le tout 1er "if") **********/
       else {

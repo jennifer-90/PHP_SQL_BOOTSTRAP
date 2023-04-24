@@ -5,7 +5,6 @@ if(!empty($_POST['login']) && !empty($_POST['pwd'])) {
 
     $login = trim($_POST['login']);
 
-
     /* - fct créé pour interroger notre db pour savoir si le login existe ou non - */
     $user = getUser($_POST['login']);
 
@@ -34,7 +33,6 @@ if(!empty($_POST['login']) && !empty($_POST['pwd'])) {
     } else {
         $_SESSION['alert'] = 'Connexion échouée';
         $url               = 'index.php?view=view/login';
-
 
     }
     header('Location: ' . $url);

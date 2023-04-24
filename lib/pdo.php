@@ -33,3 +33,5 @@ function connect(){
             return $connect; /*** si le "try" se passe bien --> return $connect  ***/
     }
 }
+
+

@@ -49,7 +49,6 @@ function userExists(string $login): bool
     }
 }
 
-
 /* --
 
 Dans la fonction userExists(),

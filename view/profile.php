@@ -30,7 +30,7 @@ if ($go_out) {
 
 
 
-$output = '<h2>Profil</h2>
+$output = '<br><h2>Profil:</h2>
 <table class="table table-striped">
     <thead>
         <tr>
