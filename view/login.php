@@ -1,17 +1,35 @@
 <?php
 
+/* -- °°view/login°°  ==> app/login ==>  view/profile  -- */
 ?>
-
-<br><h4>** SE CONNECTER ** </h4><br>
 
 <form action="index.php?view=app/login" method="post">
 
-    <label for="login"></label>
-    <input type="text" name="login" id="login" placeholder="login"><br><br>
+    <div class="cont">
+        <div class="form sign-in">
+            <h2>** SE CONNECTER ** </h2>
 
-    <label for="pwd"></label>
-    <input type="password" name="pwd" id="pwd" placeholder="pwd"><br><br>
+            <label>
+                <span>Name</span>
+                <input type="text" name="login" id="login" placeholder="login">
+            </label>
 
-    <input type="submit" class="btn btn-primary" value="SENT" >
-    <input type="reset" class="btn btn-primary" value="DELETE">
+            <label>
+                <span>Password</span>
+                <input type="password" name="pwd" id="pwd" placeholder="pwd">
+            </label>
+
+            <button type="submit" class="submit">Connect</button>
+        </div>
+    </div>
+
 </form>
+
+
+
+
+<script>
+    window.addEventListener('load', function () {
+        console.log('Cette fonction est exécutée une fois quand la page est chargée.');
+    });
+</script>

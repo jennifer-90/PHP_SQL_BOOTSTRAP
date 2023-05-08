@@ -1,55 +1,30 @@
 <?php
 
-/*-----------------------------------*/
 
-$go_out = false;
-
-if (!empty($_SESSION['user_id'])) {
-
-    $params = [
-        $_SESSION['user_id']
-    ];
-
-    // get user
-    $connect = connect();
-    $request = $connect->prepare("SELECT * FROM user WHERE id = ?");
-    $request->execute($params);
-    $user = $request->fetchObject();
-
-    if (!is_object($user)) {
-        $go_out = true;
-    }
-} else {
-    $go_out = true;
-}
-
-if ($go_out) {
-    header('Location: index.php?view=view/login');
-    die;
-}
+/* -- view/login  ==>  app/login  ==>  °°view/profile°°  -- */
 
 
+if(!empty($_SESSION['userId'])){
 
-$output = '<br><h2>Profil:</h2>
-<table class="table table-striped">
+    $user=getUser('id', $_SESSION['userId']);
+    /* -->  getUser => permet de récuperer les infos lié à un champs/valeur - dans ce cas-çi l'id -- */
+    ?>
+<table class="table">
     <thead>
         <tr>
             <th>Intitulé</th>
-            <th>Valeur</th>
+            <th>Valeurs</th>
         </tr>
     </thead>
-    <tbody>';
 
-if (!empty($user)) {
-    foreach ($user as $key => $value) {
-        if ($key == 'country' && !empty($value)) {
-            $value = getCountry($value);
-        } elseif ($key == 'pwd') {
-            continue;
-        }
-        $output .= '<tr><th scope="col">' . $key . '</th><td>' . $value . '</td></tr>';
-    }
+    <tbody>
+        <?php
+         foreach($user as $key=> $value){
+             echo '<tr><td>'.$key.'</td><td>'.$value.'</td></tr>';
+         }
+        ?>
+    </tbody>
+</table>
+<?php
+
 }
-$output .= '</tbody></table>';
-
-echo $output;

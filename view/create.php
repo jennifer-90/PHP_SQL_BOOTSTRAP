@@ -1,20 +1,52 @@
 <?php
 
-?>
+/* -- °°view/create°°  ==> app/create ==> DB  -- */
 
-<br><h4>** INSCRIPTION D'UN NOUVEL UTILISATEUR ** </h4><br>
+?>
 
 <form action="index.php?view=app/create" method="post">
 
-    <label for="login"></label>
-    <input type="text" name="login" id="login" placeholder="login"><br><br>
+    <div class="cont">
+        <div class="form sign-in">
+            <h2>** REJOINS-NOUS ! ** </h2>
 
-    <label for="email"></label>
-    <input type="email" name="email" id="email" placeholder="email"><br><br>
+            <label>
+                <span>Name</span>
+                <input type="text" name="login" id="login" placeholder="login">
+            </label>
 
-    <label for="pwd"></label>
-    <input type="password" name="pwd" id="pwd" placeholder="pwd"><br><br>
+            <label>
+                <span>Email</span>
+                <input type="email" name="email" id="email" placeholder="email">
+            </label>
 
-    <input type="submit" class="btn btn-primary" value="SENT" >
-    <input type="reset" class="btn btn-primary" value="DELETE">
+            <label>
+                <span>Password</span>
+                <input type="password" name="pwd" id="pwd" placeholder="pwd">
+            </label>
+
+            <label>
+                <span>Country</span>
+                <input type="text" name="country" id="country" placeholder="country">
+            </label>
+
+            <button type="submit" class="submit">S'inscrire</button>
+
+
+        </div>
+    </div>
+
 </form>
+
+
+
+
+
+
+
+
+<script>
+    window.addEventListener('load', function () {
+        console.log('Cette fonction est exécutée une fois quand la page est chargée.');
+    });
+</script>
