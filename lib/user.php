@@ -84,4 +84,5 @@ function getUser(string $champs, string $valeur ){
     else{
         return false;
     }
+
 }

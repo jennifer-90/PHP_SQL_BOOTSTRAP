@@ -20,11 +20,17 @@ if(!empty($_SESSION['userId'])){
     <tbody>
         <?php
          foreach($user as $key=> $value){
+             if ($key == 'pwd' or $key == 'id'){
+                 continue;
+             }
              echo '<tr><td>'.$key.'</td><td>'.$value.'</td></tr>';
          }
         ?>
     </tbody>
 </table>
+
 <?php
 
+echo '<hr><h2>Modificiation du profil:<h2>';
+include 'update.php';
 }
