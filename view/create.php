@@ -4,7 +4,9 @@
 
 ?>
 
-<form action="index.php?view=app/create" method="post">
+<form action="index.php?view=app/create" method="post" enctype="multipart/form-data">  <!-- enctype = on va mettre
+autre chose que du post (ex file)
+ -->
 
     <div class="cont">
         <div class="form sign-in">
@@ -28,6 +30,11 @@
             <label>
                 <span>Country</span>
                 <input type="text" name="country" id="country" placeholder="country">
+            </label>
+
+            <label>
+                <span>Photo</span>
+                <input type="file" name="photo" id="photo" accept="image/jpeg, image/png">
             </label>
 
             <button type="submit" class="submit">S'inscrire</button>
