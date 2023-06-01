@@ -13,8 +13,6 @@ require_once 'view/header.html';
 require_once 'view/menu.php';
 
 
-
-
 // alert message
 if (!empty($_SESSION['alert'])) {
     if (!empty($_SESSION['alert-color'])
